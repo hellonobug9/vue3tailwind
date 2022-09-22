@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-[#E5E5EA] rounded-3xl">
+  <div class="rounded-3xl bg-[#E5E5EA]">
     <div
-      class="bg-gradient-to-r from-[#FF8008] to-[#FFC837] font-semibold text-end rounded-3xl p-1"
+      class="rounded-3xl bg-gradient-to-r from-[#FF8008] to-[#FFC837] p-1 text-end font-semibold"
       :style="`width: ${(complete / total) * 100}%`"
     >
       <div
-        class="bg-white rounded-full shadow-2xl flex justify-center items-center w-8 h-8 ml-auto"
+        class="ml-auto flex h-8 w-8 items-center justify-center rounded-full bg-white shadow-2xl"
       >
         {{ complete }}
       </div>
