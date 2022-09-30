@@ -8,15 +8,15 @@
     </div>
   </div>
 </template>
-
-<script>
+<script lang="ts">
 import { useKeenSlider } from "keen-slider/vue.es";
 import "keen-slider/keen-slider.min.css";
 
-const animation = { duration: 5000, easing: (t) => t };
+const randomNumber = (maxNumber = 5) => Math.floor(Math.random() * maxNumber) + 1;
 
 export default {
   setup() {
+    const count = ref(randomNumber());
     const [container] = useKeenSlider({
       loop: true,
       renderMode: "performance",
@@ -27,27 +27,34 @@ export default {
         perView: "3.25",
       },
       created(s) {
-        s.moveToIdx(5, true, animation);
+        const animation = { duration: randomNumber()*5000, easing: (t) => t };
+        let direction = s.track.details.abs - 5;
+        if ((count.value % randomNumber()) == 1) {
+          direction = s.track.details.abs + 5;
+        }
+        s.moveToIdx(direction, true, animation);
       },
       updated(s) {
+        const animation = { duration: randomNumber()*5000, easing: (t) => t };
         s.moveToIdx(s.track.details.abs + 5, true, animation);
       },
       animationEnded(s) {
-        s.moveToIdx(s.track.details.abs + 5, true, animation);
+        count.value = count.value + randomNumber();
+        const animation = { duration: randomNumber()*5000, easing: (t) => t };
+        let direction = s.track.details.abs - 5;
+        if ((count.value % randomNumber()) == 1) {
+          direction = s.track.details.abs + 5;
+        }
+        s.moveToIdx(direction, true, animation);
       },
     });
+   
     return { container };
   },
 };
 </script>
 
 <style>
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 [class^="number-slide"],
 [class*=" number-slide"] {
   background: grey;
