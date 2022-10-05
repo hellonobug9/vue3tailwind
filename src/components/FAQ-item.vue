@@ -1,11 +1,11 @@
 <template>
     <div class="bg-gray-50 space-y-12">
       <div class="space-y-2 border-b border-blue-400 pb-5">
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between cursor-pointer" @click="open = !open">
             <div>
              {{item.question}}
             </div>
-            <div @click="open = !open">
+            <div >
                 <ChevronDownIcon :class="[open ? 'back' : 'front', 'h-6 w-6 transition-all duration-300 text-[#636366] hover:text-black']" aria-hidden="true" />
             </div>
         </div>
@@ -21,43 +21,9 @@ import { ChevronDownIcon } from '@heroicons/vue/24/solid'
 defineProps<{
   item: any;
 }>();
-const faqs = [
-  {
-    id: 1,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      " I don't know, but the flag is a big plus. I don't know, but the flag is a big plus. I don't know, but the flag is a big plus. I don't know, but the flag is a big plus. I don't know, but the flag is a big plus. I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 2,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-      id: 3,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 4,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  {
-    id: 5,
-    question: "What's the best thing about Switzerland?",
-    answer:
-      "I don't know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.",
-  },
-  // More questions...
-];
 const open = ref(false);
 </script>
 <style>
-
     .back {
         transform: rotateX(-180deg);
     }
@@ -65,14 +31,4 @@ const open = ref(false);
     .front {
         transform: rotateX(0deg);
     }
-
-
-    .display {
-        max-height: 500px;
-    }
-
-    .text-display {
-        opacity: 100;
-    }
-
 </style>

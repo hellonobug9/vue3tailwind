@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50 space-y-12">
+    <div class="bg-gray-50 space-y-12 p-10 rounded-4xl">
         <FAQItem v-for="item in faqs" :key="item.id" :item="item" />
     </div>
 </template>
