@@ -11,7 +11,7 @@ defineProps<{
 }>();
 </script>
 <style>
-div {
+.gradient-bg {
         display: flex;
         align-items: center;
         justify-content: center;
