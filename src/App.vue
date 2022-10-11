@@ -1,7 +1,8 @@
 <template>
-  <div class="max-w-3xl mx-auto">
+  <div>
   <AppHeader/>
-  <div class="mx-auto space-y-12"> 
+  <AppSubHeader/>
+  <div class="mx-auto max-w-4xl space-y-12 bg-red-400"> 
     <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, modi deserunt! Commodi necessitatibus corrupti
       fugiat quod cumque blanditiis tempore dignissimos, expedita itaque quis porro fuga veniam pariatur asperiores atque
       dolores iusto nisi vel dolorem? Libero ut ex ab placeat animi quasi. Explicabo cumque consequatur temporibus iusto
