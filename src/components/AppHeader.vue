@@ -3,16 +3,15 @@
     class="sticky top-0 z-20 h-[52px] bg-[#F9F9FB] bg-opacity-70 text-black drop-shadow-lg backdrop-blur-sm"
   >
     <div
-      class="absolute inset-0 h-full w-full bg-gradient-to-t from-gray-200 via-gray-200/20 to-gray-200/20"
+      class="absolute inset-0 hidden h-full w-full bg-gradient-to-t from-gray-100 via-gray-200/20 to-gray-100/10 sm:block"
     ></div>
 
     <div class="relative mx-auto h-full w-full max-w-4xl">
-      <!-- DESKTOP -->
       <nav class="relative flex h-full w-full items-center justify-between">
-        <!-- NAV -->
-
+        <!-- LOGO -->
         <div class="sm:order-0 order-1">Logo</div>
-
+        
+        <!-- MENU -->
         <div class="order-0 sm:order-1">
           <div class="h-6 w-6 sm:hidden" @click="toggleOpening">
             <svg
@@ -37,12 +36,14 @@
           </ul>
         </div>
 
+        <!-- SEARCH ICON -->
         <div
           @click="toggleSearching"
           class="order-2 flex flex-shrink-0 items-center justify-end sm:w-[344px]"
+          :class="[opening && 'pointer-events-none opacity-0 sm:opacity-100']"
         >
           <svg
-            :class="[opening && 'pointer-events-none opacity-0 sm:opacity-100']"
+            v-if="!searching"
             aria-hidden="true"
             class="h-5 w-5 text-black"
             fill="none"
@@ -57,19 +58,27 @@
               stroke-width="2"
             ></path>
           </svg>
+          <svg
+            v-if="searching"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            class="h-5 w-5 text-black sm:hidden"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
         </div>
 
-        <!-- <Transition
-          class="transition-opacity duration-1000"
-          enter-active-class="opacity-100"
-          enter-from-class="opacity-0"
-          leave-from-class="opacity-100"
-          leave-active-class="opacity-0"
-        > -->
+        <!-- DROPDOWN -->
         <Transition name="slide-fade">
           <div
-           
-            class="absolute top-[52px] w-full bg-white sm:bg-transparent sm:right-0 sm:top-0 sm:w-[344px]"
+            class="absolute top-[52px] w-full bg-[#F9F9FB] sm:right-0 sm:top-0 sm:w-[344px] sm:bg-transparent"
             v-if="searching"
           >
             <div class="mx-auto">
@@ -96,7 +105,7 @@
                 <input
                   id="search"
                   :value="term"
-                  class="bg-gray-5 focus:bg-gray-10 block w-full rounded-[0.625rem] border-none p-4 pl-10 text-sm text-gray-900 focus:border-transparent focus:ring-transparent sm:rounded-2xl"
+                  class="bg-gray-[#F2F2F7] focus:bg-gray-10 block w-full rounded-[0.625rem] border-none p-4 pl-10 text-sm text-gray-900 focus:border-transparent focus:ring-transparent sm:rounded-2xl"
                   placeholder="Search for anything"
                   type="search"
                   @change="onChange"
@@ -121,14 +130,14 @@
                   </svg>
                 </button>
               </div>
-              <ul v-if="opening" class="w-full bg-white sm:hidden">
+              <ul v-if="opening" class="w-full sm:hidden">
                 <li>Overview</li>
                 <li>Why us</li>
                 <li>Schedule</li>
               </ul>
             </div>
             <div
-              class="absolute top-20 right-0 hidden w-full rounded-3xl bg-white shadow-xl sm:block"
+              class="absolute top-20 right-0 hidden w-full rounded-3xl bg-white py-6 px-8 shadow-xl sm:block"
             >
               <p>Suggestions</p>
               <ul>
@@ -171,15 +180,15 @@ const clearInput = () => {
 <style scoped>
 /*Vue JS CSS Components*/
 .slide-fade-enter-active {
-  transition: opacity .5s ease;
+  transition: opacity 0.15s ease;
 }
 
 .slide-fade-enter {
-  transition: opacity .5s ease;
+  transition: opacity 0.15s ease;
 }
 
 .slide-fade-leave-active {
-  transition: opacity .5s ease;
+  transition: opacity 0.15s ease;
 }
 
 .slide-fade-leave-to, .slide-fade-enter-from
