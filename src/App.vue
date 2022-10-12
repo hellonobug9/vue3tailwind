@@ -37,8 +37,9 @@
     <MultiImageCard /> -->
     </div>
     <div class="mx-auto max-w-4xl">
-      <Footer />
+     
     </div>
+    <Footer />
   </div>
 </template>
 <script setup>
