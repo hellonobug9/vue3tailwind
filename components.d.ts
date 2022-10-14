@@ -14,6 +14,7 @@ declare module '@vue/runtime-core' {
     DisclosurePanel: typeof import('@headlessui/vue')['DisclosurePanel']
     FAQ: typeof import('./src/components/FAQ.vue')['default']
     FAQItem: typeof import('./src/components/FAQ-item.vue')['default']
+    FlippedImage: typeof import('./src/components/FlippedImage.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     FooterItem: typeof import('./src/components/FooterItem.vue')['default']
     Gradient: typeof import('./src/components/Gradient.vue')['default']
