@@ -1,24 +1,7 @@
 <template>
   <div class="bg-[#F5F5F5] py-20">
-    <div class="mx-auto mt-20 grid max-w-4xl grid-cols-3 gap-4">
-      <FlippedImage
-        :mode="'white'"
-        :image-url="'https://picsum.photos/600/200'"
-        :can-flip="true"
-        :min-height="'min-h-[400px]'"
-      />
-      <FlippedImage
-        :mode="'white'"
-        :image-url="'https://picsum.photos/600/200'"
-        :can-flip="true"
-        :min-height="'min-h-[400px]'"
-      />
-      <FlippedImage
-        :mode="'white'"
-        :image-url="'https://picsum.photos/600/200'"
-        :can-flip="true"
-        :min-height="'min-h-[400px]'"
-      />
+    <div class="w-[20rem] h-[30rem]">
+        <Gradient/>
     </div>
   </div>
 </template>

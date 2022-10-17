@@ -15,6 +15,32 @@
       @mouseleave="onMouseLeave"
       @click="toggleFlipping"
     >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-8 w-8 sm:h-10 sm:w-10 text-red-500 "
+      >
+        <path
+          d="M17.4248 26.6004L22.8581 21.1671C23.4998 20.5254 23.4998 19.4754 22.8581 18.8337L17.4248 13.4004"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-miterlimit="10"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <rect
+          x="1.2"
+          y="1.2"
+          width="37.6"
+          height="37.6"
+          rx="18.8"
+          stroke="currentColor"
+          stroke-width="2.4"
+        />
+      </svg>
       <PlusCircleIconOutline v-if="isOutline" class="h-full w-full" />
       <PlusCircleIcon v-else class="h-full w-full" />
     </div>
@@ -25,18 +51,17 @@
       <img
         v-if="imageUrl"
         class="absolute inset-0 h-full w-full transform bg-cover bg-center object-cover opacity-80 transition-all duration-500 ease-in-out"
-
         :class="[
           canDarken && 'group-hover:opacity-50',
           canZoom && 'group-hover:scale-105',
-          !flipping ? 'opacity-80' : 'opacity-30'
+          !flipping ? 'opacity-80' : 'opacity-30',
         ]"
         :src="'https://picsum.photos/600/200'"
         alt="background-image"
       />
     </div>
     <div
-      class="absolute bottom-0  w-full bg-white transition-all duration-500 ease-in-out"
+      class="absolute bottom-0 w-full bg-white transition-all duration-500 ease-in-out"
       :class="[!flipping ? 'h-1/4' : 'h-full']"
     >
       <div class="h-full w-full">
