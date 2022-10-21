@@ -1,6 +1,7 @@
 <template>
   <div class="relative">
     <NewHeader />
+    <NewSubHeader />
     <div class="bg-[#F5F5F5]">
       <div class="bg-red-200">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae amet
@@ -37,14 +38,14 @@
         dignissimos, ratione, error distinctio et nam molestiae libero
         cupiditate quaerat dicta? Magni nostrum enim reprehenderit,
         consequuntur, quo eaque quaerat, deleniti quam corporis minima
-        blanditiis perferendis quidem.Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae amet
-        sapiente odit facere beatae deserunt consequuntur debitis voluptate
-        assumenda corrupti mollitia iure minus eius quas dolor esse quam,
-        dolorem commodi maiores illo. Officiis neque corporis, iste cum
-        accusamus rerum hic mollitia voluptatibus voluptatum cupiditate
-        obcaecati cumque placeat? Commodi, incidunt labore! Magni cupiditate
-        delectus, rerum perspiciatis eius maiores mollitia! Nisi odio dicta
-        officia rerum voluptatibus ipsum tenetur necessitatibus, excepturi
+        blanditiis perferendis quidem.Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Molestiae amet sapiente odit facere beatae deserunt
+        consequuntur debitis voluptate assumenda corrupti mollitia iure minus
+        eius quas dolor esse quam, dolorem commodi maiores illo. Officiis neque
+        corporis, iste cum accusamus rerum hic mollitia voluptatibus voluptatum
+        cupiditate obcaecati cumque placeat? Commodi, incidunt labore! Magni
+        cupiditate delectus, rerum perspiciatis eius maiores mollitia! Nisi odio
+        dicta officia rerum voluptatibus ipsum tenetur necessitatibus, excepturi
         voluptatem, temporibus ratione optio commodi nemo. Similique provident
         labore dolore veniam nobis eveniet! Dolor, placeat, quod inventore vero
         possimus sapiente impedit eos modi deserunt maiores ratione a cum! Quo
@@ -88,4 +89,5 @@ import Footer from "./components/Footer.vue";
 import FlippedImage from "./components/FlippedImage.vue";
 import Review from "./components/Review.vue";
 import NewHeader from "./components/NewHeader.vue";
+import NewSubHeader from "./components/NewSubHeader.vue";
 </script>

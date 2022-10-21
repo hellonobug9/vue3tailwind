@@ -26,6 +26,7 @@ declare module '@vue/runtime-core' {
     MultiImageCard: typeof import('./src/components/MultiImageCard.vue')['default']
     MultiImageSlider: typeof import('./src/components/MultiImageSlider.vue')['default']
     NewHeader: typeof import('./src/components/NewHeader.vue')['default']
+    NewSubHeader: typeof import('./src/components/NewSubHeader.vue')['default']
     PlusToClose: typeof import('./src/components/PlusToClose.vue')['default']
     Progress: typeof import('./src/components/Progress.vue')['default']
     Review: typeof import('./src/components/Review.vue')['default']
