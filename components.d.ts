@@ -17,8 +17,11 @@ declare module '@vue/runtime-core' {
     FlippedImage: typeof import('./src/components/FlippedImage.vue')['default']
     Footer: typeof import('./src/components/Footer.vue')['default']
     FooterItem: typeof import('./src/components/FooterItem.vue')['default']
+    FourCard: typeof import('./src/components/FourCard.vue')['default']
     Gradient: typeof import('./src/components/Gradient.vue')['default']
     Input: typeof import('./src/components/Input.vue')['default']
+    LastCardDk: typeof import('./src/components/LastCard-dk.vue')['default']
+    LastCardMb: typeof import('./src/components/LastCard-mb.vue')['default']
     Menu: typeof import('@headlessui/vue')['Menu']
     MenuButton: typeof import('@headlessui/vue')['MenuButton']
     MenuItem: typeof import('@headlessui/vue')['MenuItem']
@@ -33,5 +36,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SubHeader: typeof import('./src/components/SubHeader.vue')['default']
+    ThreeCard: typeof import('./src/components/ThreeCard.vue')['default']
+    Wrapper: typeof import('./src/components/Wrapper.vue')['default']
   }
 }
