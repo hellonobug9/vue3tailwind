@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <LastCardDk />
+    <LastCardDk :cssVars="cssVars" />
   </div>
 </template>
 <script setup>
@@ -18,4 +18,8 @@ import NewHeader from "./components/NewHeader.vue";
 import NewSubHeader from "./components/NewSubHeader.vue";
 import ThreeCard from "./components/ThreeCard.vue";
 import LastCardDk from "./components/LastCard-dk.vue";
+
+const cssVars = computed(() => ({
+  "--bg-color": "linear-gradient(260.99deg, #FF512F 0%, #DD2476 100%)",
+}));
 </script>

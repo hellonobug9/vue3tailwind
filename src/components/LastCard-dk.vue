@@ -1,46 +1,51 @@
 <template>
-  <div class="h-[100vh] bg-slate-300 p-20">
-    <div class="group flex min-h-[444px] flex-col rounded-2xl bg-white p-4">
-      <div class="px-8 py-12">
-        <div class="">
-          <div class="text-xs">Bài viết</div>
-          <div class="text-4xl font-bold transition-all duration-300">
-            Tâm lý học & Đời sống
-          </div>
-        </div>
-      </div>
-      <div class="relative grow overflow-hidden">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 transform">
-          <div class="flex space-x-2">
-            <div class="">
-              <div class="rounded-2xl overflow-hidden h-[448px] w-[284px]">
-                <img
-                  src="//unsplash.it/200/200"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-            <div class="space-y-2">
-              <div class="rounded-2xl overflow-hidden h-[139px] w-[284px]">
-                <img
-                  src="//unsplash.it/200/200"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-              <div class="rounded-2xl overflow-hidden h-[301px] w-[284px]">
-                <img
-                  src="//unsplash.it/200/200"
-                  class="h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <button :style="cssVars">hello</button>
 </template>
 <script setup lang="ts">
-defineProps<{}>();
+defineProps<{
+  cssVars: any
+}>();
+
 </script>
-<style></style>
+<style>
+button {
+  position: relative;
+  -webkit-appearance: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 500;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  border: none;
+  min-width: 150px;
+}
+button::before {
+  content: "";
+  background-image: var(--bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  border-radius: 5px;
+}
+button::after {
+  content: "";
+  opacity: 0;
+  background-image: var(--bg-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transition: opacity 500ms ease;
+  border-radius: 5px;
+}
+</style>
